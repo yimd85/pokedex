@@ -28,6 +28,10 @@ body {
     border-bottom: 5px solid black;
     border-top-left-radius: 30px 30px;
     background-color: #9d0101;
+    display: flex;
+    gap: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 .ds-middle {
@@ -72,10 +76,9 @@ body {
         0 0 0 10px dimgray;
 }
 
-.ds-middle_screen>img {
+.ds-middle_screen > img {
     height: 100%;
 }
-
 
 .ds-middle_search>input[type="text"] {
     border-radius: 5px;
@@ -119,4 +122,43 @@ body {
     margin-left: 20px;
 }
 
- 
+
+.ds-header_circleOne {
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+    background-image: radial-gradient( white, rgb(7, 177, 177));
+    box-shadow:
+    0 0 0 2px white,
+    0 0 0 5px dimgray;
+}
+
+.ds-header_circleTwo {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-image: radial-gradient( white, red);
+    box-shadow:
+    0 0 0 2px white,
+    0 0 0 5px dimgray;
+}
+
+.ds-header_circleThree {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-image: radial-gradient( white, yellow);
+    box-shadow:
+    0 0 0 2px white,
+    0 0 0 5px dimgray;
+}
+
+.ds-header_circleFour {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-image: radial-gradient( white, green);
+    box-shadow:
+    0 0 0 2px white,
+    0 0 0 5px dimgray;
+}

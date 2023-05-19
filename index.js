@@ -8,12 +8,17 @@ $form.on("submit", (event) => {
     $('[name="pokemon"]')[0].value = '';
 
     const pokeapi = "https://pokeapi.co/api/v2/pokemon/";
+    const $result = $('.ds-middle_result');
+    $result.empty();
+    $result.html(`<div>Loading...</div>`);
+    const $middle = $('.ds-middle_screen');
+    $middle.empty();
+
     fetch(`${pokeapi}${pokemon.toLowerCase()}`)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            const $result = $('.ds-middle_result');
             $result.empty();
             $result.html(`
                 <div><b>name:&nbsp;</b>${data.name}</div>
@@ -21,7 +26,6 @@ $form.on("submit", (event) => {
                 <div><b>weight:&nbsp;</b>${data.weight}</div>
                 <div><b>types:&nbsp;</b>${data.types.map(v => v.type.name).toString()}</div>
             `);
-            const $middle = $('.ds-middle_screen');
             $middle.empty();
             $middle.html(
                 `<img src=${data.sprites.front_shiny || data.sprites.front_default} alt=${data.name}>`
