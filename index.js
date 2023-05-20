@@ -34,7 +34,7 @@ $searchForm.on("submit", (event) => {
                 <div><b>types:&nbsp;</b>${data.types.map((v) => v.type.name).toString()}</div>
             `);
         })
-
+        // add error handling
         .catch(() => {
             $result.html(`<div > 404 Pokemon not found</div>`);
         });
