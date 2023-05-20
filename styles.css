@@ -162,3 +162,7 @@ body {
     0 0 0 2px white,
     0 0 0 5px dimgray;
 }
+
+.ds-middle_screen_not-found{
+    padding: 5px;
+}
